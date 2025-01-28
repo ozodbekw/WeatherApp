@@ -1,7 +1,21 @@
 body {
   background-color: #eeede2;
+  color: #000;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
+}
+
+.dark {
+  background-color: #000;
+  color: #eeede2;
+  * {
+    color: #fff;
+  }
+  #details h5,
+  p,
+  span {
+    color: #000;
+  }
 }
 
 .container {
@@ -31,4 +45,18 @@ body {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   top: 0;
+}
+
+.header {
+  width: 100vw;
+  text-align: right;
+  button {
+    border: 0;
+    background-color: transparent;
+    padding: 20px;
+  }
+}
+
+.hidden {
+  display: none;
 }
