@@ -3,6 +3,8 @@ const card = document.getElementById("card");
 const details = document.getElementById("details");
 const weatherIcon = document.getElementById("weather-icon");
 const overlay = document.getElementById("overlay");
+const darkModeBtn = document.getElementById("dark-btn");
+const lightModeBtn = document.getElementById("light-btn");
 
 changeLocation.city.focus();
 
@@ -47,4 +49,17 @@ changeLocation.addEventListener("submit", (e) => {
   getWeather(cityName).then((data) => {
     updateUI(data);
   });
+});
+
+// darkmode
+
+darkModeBtn.addEventListener("click", () => {
+  darkModeBtn.classList.add("hidden");
+  lightModeBtn.classList.remove("hidden");
+  document.body.classList.add("dark");
+});
+lightModeBtn.addEventListener("click", () => {
+  darkModeBtn.classList.remove("hidden");
+  lightModeBtn.classList.add("hidden");
+  document.body.classList.remove("dark");
 });
